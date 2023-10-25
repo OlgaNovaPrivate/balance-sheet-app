@@ -4,18 +4,22 @@ import { MonthlyBalance } from '../api/entities/MonthlyBalances';
 import { calculateMonthlyBalances } from './calculateBalances';
 import { calculateLastCumulativeBalance } from './calculateBalances';
 
-const TableContainer = styled.div`
-  font-family: Arial, sans-serif;
-  padding: 20px;
-  background-color: #f5f5f5;
+const TableContainer = styled.div``;
+
+const Header = styled.h3`
+  display: flex;
+  padding: 1rem 0;
 `;
 
 const Section = styled.div`
-  margin-bottom: 20px;
-  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 3rem;
   background-color: white;
   border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  max-width: 80%;
+  margin: 0 auto;
 `;
 
 const Table = styled.table`
@@ -23,16 +27,50 @@ const Table = styled.table`
   border-collapse: collapse;
 `;
 
+const CumulativeBalance = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const Date = styled.p`
+  display: none;
+`;
+const Month = styled(Date)``;
+
+const LeftColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  flex: 1;
+`;
+
+const Span = styled(LeftColumn)`
+  font-size: 2rem;
+`;
+
+const RightColumn = styled(LeftColumn)`
+  align-items: flex-start;
+`;
+
 const Th = styled.th`
   text-align: left;
-  padding: 8px;
-  background-color: #f2f2f2;
+  padding: 10px;
+  background-color: #edf1f4;
+  &:nth-child(4),
+  &:last-child {
+    text-align: end;
+  }
 `;
 
 const Td = styled.td`
   text-align: left;
-  padding: 8px;
-  border-bottom: 1px solid #ddd;
+  padding: 10px;
+  border-bottom: 1px solid #f5f8fa;
+  &:nth-child(4),
+  &:last-child {
+    text-align: end;
+  }
 `;
 
 export interface BalanceTableProps {
@@ -45,17 +83,24 @@ const BalanceTable: React.FC<BalanceTableProps> = ({ balance }) => {
   return (
     <TableContainer>
       <Section>
-        <h3>
-          Summary:{' '}
+        <Header>
+          <RightColumn>
+            <Span>Premier Checking</Span>
+            Checking *3875
+          </RightColumn>
           {lastCumulativeBalance ? (
-            <p>
-              Date: {lastCumulativeBalance.date}, Month: {lastCumulativeBalance.month}, Last Cumulative Balance:{' '}
-              {lastCumulativeBalance.amount}
-            </p>
+            <CumulativeBalance>
+              <Date>{lastCumulativeBalance.date}</Date>
+              <Month>{lastCumulativeBalance.month}</Month>
+              <LeftColumn>
+                Available Balance:
+                <Span>€ {lastCumulativeBalance.amount}</Span>
+              </LeftColumn>
+            </CumulativeBalance>
           ) : (
             <p>No data available</p>
           )}
-        </h3>
+        </Header>
         <Table>
           <thead>
             <tr>
