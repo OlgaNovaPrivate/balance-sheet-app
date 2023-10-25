@@ -1,0 +1,46 @@
+{
+    "monthlyBalances": [
+        { "id": 1, "month": "january", "transactions": [
+            {"description": "Payroll deposit", "type": "Credit", "amount": 2200.00, "date": "01.15.2023"}
+        ]}, 
+        { "id": 2, "month": "february", "transactions": [
+            {"description": "Payroll deposit", "type": "Credit", "amount": 2200.00, "date": "02.15.2023"},
+            {"description": "ATM Withdrawal", "type": "Debit", "amount": -200, "date": "02.19.2023"}
+        ]},
+        { "id": 3, "month": "march", "transactions": [
+            {"description": "Payroll deposit", "type": "Credit", "amount": 2200.00, "date": "03.15.2023"},
+            {"description": "ATM Withdrawal", "type": "Debit", "amount": -500, "date": "03.20.2023"},
+            {"description": "ATM Withdrawal", "type": "Debit", "amount": -100, "date": "03.22.2023"}
+        ]},
+        { "id": 4, "month": "april", "transactions": [
+            {"description": "Payroll deposit", "type": "Credit", "amount": 2200.00, "date": "04.15.2023"},
+            {"description": "ATM Withdrawal", "type": "Debit", "amount": -300, "date": "04.16.2023"},
+            {"description": "ATM Withdrawal", "type": "Debit", "amount": -500, "date": "04.17.2023"}
+        ]},
+        { "id": 5, "month": "may", "transactions": [
+            {"description": "Payroll deposit", "type": "Credit", "amount": 2200.00, "date": "05.15.2023"},
+            {"description": "ATM Withdrawal", "type": "Debit", "amount": -200, "date": "05.19.2023"}
+        ]},
+        { "id": 6, "month": "june", "transactions": [
+            {"description": "Payroll deposit", "type": "Credit", "amount": 2200.00, "date": "06.15.2023"},
+            {"description": "ATM Withdrawal", "type": "Debit", "amount": -700, "date": "06.20.2023"}
+        ]},
+        { "id": 7, "month": "july", "transactions": [
+            {"description": "Payroll deposit", "type": "Credit", "amount": 2200.00, "date": "07.15.2023"},
+            {"description": "ATM Withdrawal", "type": "Debit", "amount": -300, "date": "07.20.2023"}
+        ]},
+        { "id": 8, "month": "august", "transactions": [
+            {"description": "Payroll deposit", "type": "Credit", "amount": 2200.00, "date": "08.15.2023"},
+            {"description": "ATM Withdrawal", "type": "Debit", "amount": -200, "date": "08.24.2023"}
+        ]},
+        { "id": 9, "month": "september", "transactions": [
+            {"description": "Payroll deposit", "type": "Credit", "amount": 2200.00, "date": "09.15.2023"},
+            {"description": "ATM Withdrawal", "type": "Debit", "amount": -300, "date": "09.21.2023"}
+        ]},
+        { "id": 10, "month": "october", "transactions": [
+            {"description": "Payroll deposit", "type": "Credit", "amount": 2200.00, "date": "10.15.2023"},
+            {"description": "ATM Withdrawal", "type": "Debit", "amount": -400, "date": "07.16.2023"}
+        ]}
+
+    ]
+}

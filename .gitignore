@@ -1,0 +1,19 @@
+# Node.js
+node_modules/
+
+# Compiled output
+dist/
+.rpt2_cache/
+
+# Logs and other generated files
+logs/
+.log
+.env
+
+# Editor-specific files
+.vscode/
+.idea/
+
+# OS-specific files
+Thumbs.db
+.DS_Store
