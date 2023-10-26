@@ -19,9 +19,9 @@ To complete the deployment process, the Virtual Machine on Google Compute Engine
 >   --boot-disk-size=10GB
 
 SSH into VM:
-```gcloud compute ssh your-instance-name
+```gcloud compute ssh test-project-deployment
 
-The app was deployed via `scp` or the `gcloud compute scp` command.
+The application's Git repository was cloned on the VM. 
 
 
 ## Table of Contents
